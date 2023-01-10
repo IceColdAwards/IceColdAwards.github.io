@@ -135,7 +135,7 @@
 		height: 30vh;
 		background-color: white;
 		color: rgb(0, 10, 20);
-    padding: 14vh 0vh 16vh;
+    padding: 13vh 0vh 17vh;
 	}
 
 	:global(body) {
@@ -150,7 +150,7 @@
     white-space: nowrap;
   }
   .award {
-    font-size: 10vh;
+    font-size: 12vh;
     color: darkblue;
   }
 
