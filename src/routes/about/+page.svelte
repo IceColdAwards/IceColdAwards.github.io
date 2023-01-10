@@ -1,2 +1,2 @@
 <h1>About</h1>
-<p>Reload this page</p>
+<p>This is a prank bro</p>
