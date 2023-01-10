@@ -12,9 +12,13 @@
 
 	let y;
   let height;
+  let width;
+
+  let best_prefix = ""
+  $: best_prefix = (width / height > 1.25) ? "The best ice water of" : ""
 </script>
 
-<svelte:window bind:scrollY={y} bind:innerHeight={height}/>
+<svelte:window bind:scrollY={y} bind:innerHeight={height} bind:innerWidth={width}/>
 <svelte:head>
     <title>Ice Water Awards</title> 
 </svelte:head>
@@ -45,27 +49,27 @@
 	</span>
 
 	<div class="foreground">
-    <span class="announce">The best ice water of December 2022:</span>
+    <span class="announce">{best_prefix} December 2022:</span>
     <span class="award">Fogo de Chão</span>
     <span class="location">Minneapolis, MN</span>
 	</div>
 	<div class="foreground">
-    <span class="announce">The best ice water of November 2022:</span>
+    <span class="announce">{best_prefix} November 2022:</span>
     <span class="award">IkaSan</span>
     <span class="location">Omaha, NE</span>
 	</div>
 	<div class="foreground">
-    <span class="announce">The best ice water of October 2022:</span>
+    <span class="announce">{best_prefix} October 2022:</span>
     <span class="award">Abrohome</span>
     <span class="location">Ames, IA</span>
 	</div>
 	<div class="foreground">
-    <span class="announce">The best ice water of September 2022:</span>
+    <span class="announce">{best_prefix} September 2022:</span>
     <span class="award">Half Price Books</span>
     <span class="location">St. Louis Park, MN</span>
 	</div>
 	<div class="foreground">
-    <span class="announce">The best ice water of August 2022:</span>
+    <span class="announce">{best_prefix} August 2022:</span>
     <span class="award">Literally the Tap</span>
     <span class="location">Ames, IA</span>
 	</div>
@@ -106,6 +110,7 @@
 		position: fixed;
     width: 100%;
     will-change: transform;
+    pointer-events: none;
 	}
 
 	.text {
@@ -130,7 +135,7 @@
 		height: 30vh;
 		background-color: white;
 		color: rgb(0, 10, 20);
-    padding: 12vh 0vh 18vh;
+    padding: 14vh 0vh 16vh;
 	}
 
 	:global(body) {
@@ -142,13 +147,15 @@
   .announce {
     font-size: 7vh;
     color: gold;
+    white-space: nowrap;
   }
   .award {
-    font-size: 12vh;
+    font-size: 10vh;
     color: darkblue;
   }
 
   .location {
-    font-size: 7vh;
+    font-size: 6vh;
+    white-space: nowrap;
   }
 </style>
