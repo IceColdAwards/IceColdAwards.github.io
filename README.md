@@ -1,3 +1,3 @@
-# This is the README file
+# Ice Cold Awards
 
-Why is this happening?
+Your #1 source to find the best ice water around!
