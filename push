@@ -1,0 +1,5 @@
+#!/bin/bash
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/icecoldawards.rsa"
+git push
+yarn build
+yarn deploy
